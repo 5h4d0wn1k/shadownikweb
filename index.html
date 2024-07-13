@@ -694,20 +694,6 @@
         });
     });
   </script>
-  <script>
-    document.getElementById('impliedsubmit').addEventListener('click', function() {
-        document.getElementById('cookiesdirective').style.display = 'none';
-        // Optional: Save the user's consent in localStorage or cookies
-        localStorage.setItem('cookiesAccepted', 'true');
-    });
-
-    // Optional: Check if the user has already accepted cookies
-    window.onload = function() {
-        if (localStorage.getItem('cookiesAccepted') === 'true') {
-            document.getElementById('cookiesdirective').style.display = 'none';
-        }
-    }
-</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-23J7WNESFT"></script>
 <script>
@@ -717,7 +703,6 @@
 
   gtag('config', 'G-23J7WNESFT');
 </script>
-  
   <div id="cookiesdirective" style="font-family: sans-serif; position: fixed; bottom: 0px; left: 0px; width: 100%; height: auto; background: rgb(255, 255, 255); color: rgb(66, 74, 77); text-align: center; z-index: 1050;">
       <div class="cookie-wrapper" style="position:relative;height:auto;width:90%;padding:10px;margin-left:auto;margin-right:auto;">
           <div class="mbr-text">
@@ -736,6 +721,16 @@
           </div>
       </div>
   </div>
+<script>
+  document.getElementById('impliedsubmit').addEventListener('click', function() {
+    document.getElementById('cookiesdirective').style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true');
+  });
+  window.onload = function() {
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+      document.getElementById('cookiesdirective').style.display = 'none';
+    }
+  }
 
 </body>
 </html>
