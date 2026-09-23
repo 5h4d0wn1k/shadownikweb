@@ -48,5 +48,5 @@ File an issue or PR for content corrections, accessibility, or new sections.
 
 ## License
 
-The site content and assets are provided as-is; no LICENSE file is bundled —
-contact the owner before reusing assets.
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
